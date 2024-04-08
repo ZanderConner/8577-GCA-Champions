@@ -9,6 +9,7 @@ import org.opencv.imgproc.Imgproc;
 
 import edu.wpi.first.apriltag.AprilTagDetector;
 import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpilibj.Timer;
 
@@ -18,7 +19,7 @@ public class AprilTagDetection extends SubsystemBase{
 
     Thread m_visionThread;
 
-    public AprilTagDetection() {
+    public Command AprilTagPose() {
         m_visionThread =
         new Thread(
             () -> {
@@ -115,6 +116,7 @@ public class AprilTagDetection extends SubsystemBase{
             });
     m_visionThread.setDaemon(true);
     m_visionThread.start();
+    return null;
     }
     
 }
