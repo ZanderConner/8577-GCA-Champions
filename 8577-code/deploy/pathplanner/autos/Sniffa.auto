@@ -1,0 +1,62 @@
+{
+  "version": 1.0,
+  "startingPose": null,
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "preload score"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "PrepareLaunch"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 2.0
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "launchNote"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Disrupter run"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "note shuffle"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "return"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}
