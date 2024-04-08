@@ -14,11 +14,11 @@ import edu.wpi.first.wpilibj.Timer;
 
 
 
-public class LimeLightDetection extends SubsystemBase{
+public class AprilTagDetection extends SubsystemBase{
 
     Thread m_visionThread;
 
-    public LimeLightDetection() {
+    public AprilTagDetection() {
         m_visionThread =
         new Thread(
             () -> {
